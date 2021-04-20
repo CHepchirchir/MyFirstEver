@@ -5,51 +5,48 @@ Created on Fri Apr 16 13:23:30 2021
 @author: chepchir
 """
 
-#1. convert Metric to SI Units
 
-celsius =(37.5)
-fahrenheit =((celsius * 1.8) + 32)
-print("%0.3f farenheit equal to %0.1f Celsius" %(fahrenheit,Celsius)
+#1. Temperature from Fahrenheit to Celsius and back
+
+celsius = 37.5
+fahrenheit = celsius * 1.8 + 32
+print('%0.3f farenheit equal to %0.1f Celsius' %(fahrenheit,celsius))
       
-#2. Nautical Miles conversion factor
-print("Enter the distance in KMS: ")
-KMS = float(input())
+#2. Convert Nautical Miles to KMS and back,
+KMS = float(input('Enter distance in KMS: '))
+Nautical= float(input('Enter distance in Nautical miles: '))
 # conversion factor
 NMconv_factor = 1.852
 
-Nautical_Mile = float(KMS * NMconv_factor)
-print("%0.3fNauticalMiles equal to %0.3f Kilometers" %(Nautical_Mile,kms)
+Nautical_Mile = KMS * NMconv_factor
+KILOMETERS = Nautical / NMconv_factor
+print('%0.3fNautical_Miles equal to %0.3f Kilometers' % (KMS,Nautical_Mile))
+print('%0.3fKilometers equal to %0.3f Nautical Miles' % (Nautical,KILOMETERS))
 
-#3. convert kilometers into miles
-kilo_meter = float(input("Enter distance in kilometers: "))
+#3. Convert Kilometer to Miles and back,
+kilo_meter = float(input('Enter distance in Kilometers: '))
+Miles =float(input('Enter distance in Miles: '))
 
+# conversion factor
 KMconv_fac = 0.621371
  
 miles = kilo_meter * KMconv_fac
-print('%0.3f kilometers is equal to %0.3f miles' %(km,miles))
+Kilometer = Miles / KMconv_fac
+print('%0.3f kilometers is equal to %0.3f miles' % (Miles,Kilometer))
+print('%0.3f miles is equal to %0.3f Kilometers' % (kilo_meter,miles))
 
-###convert miles into kilometers
-miles = float(input("Enter distance in miles: "))
- 
-# conversion factor
-Mileconv_fac = 1.60934
- 
-# calculate miles
-km = miles * Mileconv_fac
-print('%0.3f miles is equal to %0.3f Kilometers' %(miles,km))
+## 4.Convert Centimeters to meters and back
+centimeter = float(input("Enter the length in Centimeters: "))
+meter = float(input("Enter the length in Meters: "))
 
+meters = float(centimeter/ 100)
+Centimeters =float(meter* 100)
+print('%0.3f Centimeters is equal to %0.3f Meters' % (meter ,Centimeters))
+print('%0.3f Centimeters is equal to %0.3f meters' % (centimeter,meters))
 
-
-
-## CM-M 
-print("Enter the length in centimeter::")
-centimeter = float(input())
-meters = float(centimeter/100)
-print("Length in Meter      = ", meters, " m")
-print("Length in Centimeter    = ", centimeter, " cm")
-##
-meter =float(input()) # Length in Meter
-yard =float(input())  # Length in Yard
+## 5Convert Yard to Meters and back,
+meter = float(input("Enter the length in Meters: "))
+yard =float(input('Enter lenght in yards:'))
   
 # converting Meter to Yard
 meter_to_yard = meter * 1.09361
@@ -57,6 +54,18 @@ meter_to_yard = meter * 1.09361
 # converting Yard to meter
 yard_to_meter = yard / 1.09361
   
-# printing the output
-print("%d Meter in Yard = %.4f " % (meter, meter_to_yard))
-print("%d Yard in Meter = %.4f " % (yard, yard_to_meter))
+# output
+print("%d Meter is equal to %.4f Yard" % (meter, meter_to_yard))
+print("%d Yard is equalto %.4f Meter" % (yard, yard_to_meter))
+
+#6. Convert Inches to Centimeters and back
+inches= float(input("Enter length in Inches: "))
+centimeter = float(input("Enter the length in Centimeters: "))
+
+# conversion factor
+conv_fac = 0.39370
+
+Inches = centimeter * conv_fac
+Centimeters =inches / conv_fac
+print("%d Inches is equal to %.4f Centimeters" % (inches, Inches))
+print("%d Centimeters is equalto %.4f inches" % (centimeter, Centimeters))
